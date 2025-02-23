@@ -20,7 +20,6 @@ interface DeleteProductArgs {
 
 const productResolvers = {
   Query: {
-    // Matches typeDefs: getProducts
     getProducts: async (): Promise<any> => {
       try {
         return await Product.find();
@@ -29,7 +28,6 @@ const productResolvers = {
       }
     },
 
-    // Matches typeDefs: getProduct
     getProduct: async (_: any, { id }: GetProductArgs): Promise<any> => {
       try {
         const product = await Product.findById(id);

@@ -7,13 +7,19 @@ interface GetUserArgs {
 }
 
 interface CreateUserArgs {
-  // Define the necessary fields for creating a user.
+  name: string;
+  username: string;
+  age: number;
+  nationality: Nationality;
   [key: string]: any;
 }
 
 interface UpdateUserArgs {
   id: string;
-  // Define additional fields for updating a user.
+  name: string;
+  username: string;
+  age: number;
+  nationality: Nationality;
   [key: string]: any;
 }
 
@@ -22,7 +28,6 @@ interface DeleteUserArgs {
 }
 
 const userResolvers = {
-  // Expose the Nationality enum if your schema requires it.
   Nationality: Nationality,
 
   Query: {
@@ -80,6 +85,8 @@ const userResolvers = {
         );
       }
     },
+
+
 
     deleteUser: async (_: any, args: DeleteUserArgs): Promise<boolean> => {
       try {

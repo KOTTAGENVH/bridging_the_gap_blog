@@ -20,7 +20,7 @@ const user_typeDefs = gql`
 }
 
   type User {
-    id: ID!
+    id: String!
     name: String
     username: String
     age: Int
@@ -43,15 +43,14 @@ const user_typeDefs = gql`
       nationality: Nationality
     ): User
 
-    updateUser(
-      id: ID!
-      name: String
-      username: String
-      age: Int
-      nationality: Nationality
-    ): User
+    updateUser(  
+      id: String!
+  name: String
+  username: String
+  age: Int
+  nationality: Nationality): User
 
-    deleteUser(id: ID!): Boolean
+    deleteUser(id: String!): String
   }
 `;
 
