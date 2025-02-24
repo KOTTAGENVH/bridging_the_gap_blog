@@ -82,7 +82,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// Merge your GraphQL type definitions and resolvers
+// Merge GraphQL type definitions and resolvers
 const typeDefs = mergeTypeDefs([product_typeDefs, user_typeDefs]);
 const resolvers = mergeResolvers([productResolvers, userResolvers]);
 
