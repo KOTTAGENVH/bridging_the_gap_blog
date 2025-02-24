@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import axios from "axios";
 //Api Client
 const apiClient = axios.create({
